@@ -15,16 +15,15 @@ public class Veiculo {
         this.combustivel = combustivel;
         this.motorLigado = false;
     }
-
-    public Veiculo(){
-        System.out.println("Contrutor padrão.");
+    public boolean getMotorLigado(){
+        
     }
 
     public void ligarMotor() {
         if(this.motorLigado){
             System.out.println("O motor já está ligado.");
         } else {
-            this.motorLigado = true;
+            motorLigado = true;
             System.out.println("Motor ligado.");
         }
     }
@@ -34,7 +33,7 @@ public class Veiculo {
             this.motorLigado = false;
             System.out.println("Motor desligado.");
         } else {
-            System.out.println("O motor já está deligado.");
+            System.out.println("O motor já está desligado.");
         }
     }
 
@@ -69,7 +68,7 @@ public class Veiculo {
                             + "Modelo: " + this.modelo + "\n"
                             + "Ano: " + ano + "\n"
                             + "velocidade atual: " + velocidadeAtual + " km/h \n"
-                            + "Motor ligado: " + (this.motorLigado? "sim":"não") + "\n" // esse esquema é como um if sintetizado, onde ele executa de "x:y", em sequencia, como "true:false"
+                            + "Motor ligado: " + (this.motorLigado? "sim":"não") + "\n" 
                             + "Combustivel: " + this.combustivel
                             );
     }
